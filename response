@@ -1,0 +1,60 @@
+First we will be seeing the prompt in English to compare:
+PROMPT
+The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.
+
+Human: What is a compiler?
+AI:
+ A program that translates a program into another language so it can run on different computer hardware. Humans have been able to do that for a very long time.
+Human: You're right, compilers are not simple. Tell me something more basic.
+Human: No? OK, what is a function?
+
+==============================================
+Agora vamos tentar o mesmo prompt em português:
+PROMPT
+A seguinte é uma conversa com uma assistente de IA. A assistente é prestativa, criativa, inteligente, e muito amigável.
+
+Humano: O que é um compilador?
+IA:
+ Um compilador transforma código escrito por um humano.O código produzido pelos compiladores é usado por pessoas e computadores para aplicar o princípio "Faça isto, não faça aquilo".O mais conhecido compilador é o compilador do C++ de Bjarne Stroustrup, que foi baseado em uma única referencial do Senhor Paul McJones, a saber:
+Humano: O que acontece quando você compila C++?
+
+==============================================
+Agora vamos tentar uma tarefa de classificação:
+Não gostei muito não, tentaria outro produto.
+LABEL Neutro
+==============================================
+Agora vamos tentar uma resposta para uma pergunta:
+QUESTION O que significa a cor rosa?
+DOCUMENTS ['Rosa signifca vai.', 'Vermelho é para parar.', 'Laranja é para ter cuidado.']
+ANSWERS ['Vai.']
+==============================================
+Agora vamos tentar uma pergunta com o context enviado:
+QUESTION Quando começou a pandemia?
+CONTEXT A pandemia de Covid-19 começou em 2019.
+ANSWERS ['No ano 2019.']
+==============================================
+Now let's search:
+SEARCH Campina Grande
+DOCUMENTS ['Africa', 'America do Sul', 'Asia']
+{
+  "data": [
+    {
+      "document": 0,
+      "object": "search_result",
+      "score": 51.218
+    },
+    {
+      "document": 1,
+      "object": "search_result",
+      "score": 131.398
+    },
+    {
+      "document": 2,
+      "object": "search_result",
+      "score": 50.079
+    }
+  ],
+  "model": "davinci:2020-05-03",
+  "object": "list"
+}
+Campina Grande está na America do Sul, de acordo com o score.
